@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+  <title>Calculadora de juros compostos</title>
+  <style type="text/css">
+    
+    #BG{
+      width: 1000px;
+
+    }
+
+  </style>
+</head>
+<body bgcolor="black"> 
+<img id="BG" src="C:\Users\user\Desktop\Calculadora\img/minhacasa_minhadivida.jpg" style="float: left;">
+<div style="margin-top: 50px;">
+ <form name="form1">
+  <table border="3" width="1000" align="center">
+  <h1 style="text-align: center; color: white;">CALCULADORA DE JUROS COMPOSTOS</h1>
+    <tr align="center" height="100">
+      <td style="text-align: center; background-color: white; border:none;" nowrap="row">  
+      <label for="capital" id="Montante">Capital: R$</label>
+      <input type="tex" id="capital" placendolder="Capital">
+      </td>
+      <td style="text-align: center; background-color: white; border:none;" nowrap="row">
+      <label for="taxaJuros">Juros: (%)</label>
+      <input type="tex"  id="taxaJuros" placendolder="Taxa de juros">
+    </td>
+      <td style="text-align: center; background-color: white; border:none;" nowrap="row">
+      <label for="tempoAplicacao">Parcelas: </label>
+    <input type="number" id="tempoAplicacao" placendolder="Tempo Aplicação">  
+      </td>
+      <tr align="center">
+    <td style="text-align: center; background-color: black; border:none;" nowrap="row">
+      
+    </tr>
+    <tr align="center"  height="100">
+      <td style="text-align: center; background-color: white; border:none;" nowrap="row">
+    <label for="ValorTotal">Valor Total: R$</label>
+    <input type="text"  id="total">
+      </td>
+      <td style="text-align: center; background-color: white; border:none;" nowrap="row">
+    <label for="Mensalidade">Mensalidades: </label>
+    <input type="text"  id="mensal">
+    </td>
+    <td style="text-align: center; background-color: white; border:none;" nowrap="row"><img src="C:\Users\user\Desktop\Calculadora\img/inmetro.jpg"></td>
+    </tr>
+  </table>
+  <div style="margin: 50px; margin-left: 1275px;"><button style="width: 500px; height: 25px;" type="button"  onclick="calculaJuros()">Calcular</button>&nbsp;<button style="width: 500px; height: 25px;" type="button"  onclick="LimparCampos()">Resetar</button></div>
+    
+</div>
+<script type="text/javascript">
+  function calculaJuros() {
+
+  var capital = document.getElementById(Montante);
+  var taxaJuros = document.getElementById();
+  var tempoAplicacao = 
+
+  var taxaJuros = taxaJuros/100;
+  var montante = capital*Math.pow((1+taxaJuros),tempoAplicacao);
+  var tot =  montante.toString();
+  var men = tot/tempoAplicacao; 
+}
+
+function LimparCampos()
+  {
+     document.form1.capital.value = ""
+     document.form1.taxaJuros.value = ""
+     document.form1.tempoAplicacao.value = ""
+     document.form1.total.value = ""
+     document.form1.mensal.value = ""
+  }
+</script>
+</body>
+</html>
